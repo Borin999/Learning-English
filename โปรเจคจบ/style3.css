@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: "Georgia", serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150vh;
+}
+
+header {
+  background-color: #000;
+  text-align: center;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; z-index: 1000;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site-title {
+  font-size: 32px;
+  color: white;
+  text-shadow: 0 0 10px white, 0 0 20px white;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #000;
+  padding: 10px 0;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+  padding: relative;
+  transition: all 0.3 ease;
+}
+nav a:hover {
+  text-shadow: 0 0 8px white;
+}
+
+.content {
+  display: flex;
+  flex-direction: column; /* เรียงเนื้อหาเป็นแนวตั้ง */
+  align-items: center; /* จัดให้อยู่ตรงกลาง */
+  text-align: center;
+  width: 100%;
+  margin-top: 50px; /* ปรับระยะห่างจากเมนู */
+}
+
+h2  {
+  display: block;
+  font-size: 35px;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: normal;
+  color: #000;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.content img {
+  display: block;
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+  border-radius: 10px; /* ขอบมน */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ดูสวย */
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* แบ่งเป็น 4 คอลัมน์ */
+  gap: 20px; /* เพิ่มระยะห่างระหว่างปุ่ม */
+  justify-content: center; /* จัดให้อยู่กึ่งกลาง */
+  margin-top: 40px; /* เพิ่มระยะห่างจากรูปภาพ */
+  width: 80%; /* ลดความกว้างเพื่อให้ดูสมส่วน */
+}
+
+/* ปุ่มพื้นฐาน */
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%; /* ทำให้ปุ่มขยายเต็มพื้นที่ใน grid */
+}
+
+/* เปลี่ยนสีตามภาพที่ให้มา */
+.noun { background-color: #D7B4F3; color: black; }
+.pronoun { background-color: #FFC0CB; color: black; }
+.adjective { background-color: #FFABAB; color: black; }
+.verb { background-color: #FCE883; color: black; }
+.adverb { background-color: #C3F5FF; color: black; }
+.preposition { background-color: #C8F7C5; color: black; }
+.conjunction { background-color: #FFD3B6; color: black; }
+.interjection { background-color: #A8E6CF; color: black; }
+
+/* เอฟเฟกต์เมื่อโฮเวอร์ */
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}

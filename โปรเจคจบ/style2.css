@@ -1,0 +1,130 @@
+body {
+  font-family: "Georgia", serif; 
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* ปรับให้ header อยู่ด้านบนและคงที่ */
+header {
+  background-color: #000;
+  text-align: center;
+  position: fixed;/* ทำให้แถบเมนูคงที่ */
+  top: 0; left: 0;
+  width: 100%; z-index: 1000; /* ทำให้ header อยู่ด้านหน้าของเนื้อหา */
+  padding: 20px 0; /* เพิ่ม padding เพื่อให้ข้อความหัวข้อไม่ติดขอบ */
+  display: flex;
+  flex-direction: column; /* จัดเรียงเนื้อหาใน header เป็นแนวตั้ง */
+  align-items: center;
+}
+
+.site-title { 
+  font-size: 32px; 
+  color: white;
+  text-shadow: 0 0 10px white, 0 0 20px white;
+  margin: 0;
+  padding-bottom: 10px; 
+}
+
+nav {
+display: flex;
+justify-content: center;
+width: 100%;
+background-color: #000;
+padding: 10px 0;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+  padding: relative;
+  transition: all 0.3s ease;
+}
+nav a:hover {
+text-shadow: 0 0 8px white;
+}
+ 
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 800px;
+}
+
+/* ตั้งค่ากลางให้เนื้อหาอยู่ตรงกลาง */
+.content {
+  text-align: center;
+  margin: 50px auto;
+  width: 80%;
+}
+
+.content h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* สไตล์สำหรับกล่องหัวข้อไวยากรณ์ */
+.grammar-topics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  justify-content: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ปุ่มลิงก์หัวข้อ */
+.topic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: #ddd;
+  color: black;
+  padding: 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+  width: 220px;
+  height: 80px;
+  font-weight: bold;
+}
+
+/* ข้อความภาษาไทย */
+.topic span {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* เพิ่มเอฟเฟกต์ Hover */
+.topic:hover {
+  background-color: #bbb;
+}
+
+/* สำหรับหน้าจอขนาดเล็ก ให้ปุ่มเรียงกัน 2 แถว */
+@media (max-width: 768px) {
+  .grammar-topics {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* สำหรับหน้าจอมือถือ ให้ปุ่มเรียงกันแนวตั้ง */
+@media (max-width: 480px) {
+  .grammar-topics {
+      grid-template-columns: repeat(1, 1fr);
+  }
+}

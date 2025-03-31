@@ -1,0 +1,192 @@
+/* ตั้งค่าสไตล์โดยรวม */
+body {
+  margin: 0;
+  font-family: "Georgia", serif;
+  background-color: #f0f0f0;
+  color: #111;
+}
+/* ปรับให้ header อยู่ด้านบนและคงที่ */
+header {
+  background-color: #000;
+  text-align: center;
+  position: fixed;  /* ทำให้แถบเมนูคงที่ */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;   /* ทำให้ header อยู่ด้านหน้าของเนื้อหา */
+  padding: 20px 0; /* เพิ่ม padding เพื่อให้ข้อความหัวข้อไม่ติดขอบ */
+  display: flex;
+  flex-direction: column; /* จัดเรียงเนื้อหาใน header เป็นแนวตั้ง */
+  align-items: center;
+}
+
+/* ทำให้หัวข้อเว็บไซต์อยู่ด้านบนของแถบเมนู */
+.site-title {
+  font-size: 32px;
+  color: white;
+  text-shadow: 0 0 10px white, 0 0 20px white; /* เรืองแสงสีขาว */
+  margin: 0; /* เอาขอบเขตออกเพื่อไม่ให้ขยับ */
+  padding-bottom: 10px; /* เพิ่มช่องว่างระหว่างหัวข้อกับเมนู */
+}
+
+/* เมนูนำทาง (อยู่ใต้หัวข้อ) */
+nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: black;
+  padding: 10px 0;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+nav a:hover {
+  text-shadow: 0 0 8px white;
+}
+
+/* ป้องกันเนื้อหาถูกเมนูบัง */
+.container {
+  margin-top: 120px; /* ปรับ margin-top ให้มากพอ เพื่อเว้นช่องว่างจาก header */
+}
+}
+
+/* สไตล์หัวข้อเว็บไซต์ */
+.site-title {
+  font-size: 32px;
+  color: white;
+  text-shadow: 0 0 10px white, 0 0 20px white; /* เรืองแสงสีขาว */
+  margin-bottom: 10px;
+}
+
+/* สไตล์คอนเทนเนอร์หลัก */
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  background-color: #d3d3d3;  /* พื้นหลังสีเทา */
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+/* คอนเทนเนอร์ภายในที่ล็อกเนื้อหาให้อยู่ตรงกลาง */
+.content-container {
+  display: flex;
+  width: 80%;       /* ปรับขนาดของเนื้อหาด้านในให้ไม่เต็มจอ */
+  max-width: 1200px; /* จำกัดความกว้างสูงสุด เพื่อให้เนื้อหาอยู่กลางจอ */
+  margin: 0 auto;   /* จัดให้อยู่ตรงกลาง */
+}
+
+/* คอลัมน์ด้านซ้าย (รูปภาพ) */
+.left {
+  width: 50%; /* ปรับให้รูปภาพมีขนาด 50% */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* คอลัมน์ด้านขวา (ข้อความ) */
+.right {
+  width: 50%; /* ปรับให้ข้อความมีขนาด 50% */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* เมนูนำทาง */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  padding: 10px 0;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+nav a:hover {
+  text-shadow: 0 0 8px white; /* เพิ่มเอฟเฟกต์เรืองแสงขณะโฮเวอร์ */
+}
+
+/* เอฟเฟกต์เรืองแสงเมื่อคลิก */
+nav a:active {
+  text-shadow: 0 0 10px white, 0 0 15px white;
+}
+
+/* จัดเค้าโครงหน้าเว็บให้เป็น 2 คอลัมน์ */
+.container {
+  display: flex;
+  margin-top: 20px;
+}
+.left {
+  width: 60%;
+}
+.right {
+  width: 40%;
+  padding: 20px;
+}
+
+/* สไตล์ Slideshow */
+.slideshow {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.slideshow .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.slideshow .slide.active {
+  opacity: 1;
+}
+
+/* ปุ่ม Learn More */
+.learn-more-btn {
+  background-color: black;  /* พื้นหลังสีดำ */
+  color: white;  /* ตัวอักษรสีขาว */
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;  /* ขอบมน */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 15px;  /* เพิ่มระยะห่างจากข้อความด้านบน */
+}
+
+/* เอฟเฟกต์เมื่อ hover */
+.learn-more-btn:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* เอฟเฟกต์เมื่อคลิก */
+.learn-more-btn:active {
+  transform: scale(0.95);  /* กดแล้วหดเล็กน้อย */
+}
+.learn-more-btn {
+  display: inline-block; /* ทำให้ลิงก์ดูเป็นปุ่ม */
+  text-decoration: none; /* ลบขีดเส้นใต้ลิงก์ */
+  text-align: center;
+}

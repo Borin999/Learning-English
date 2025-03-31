@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130vh;
+}
+
+header {
+  background-color: #000;
+  text-align: center;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; z-index: 1000;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site-title {
+  font-size: 32px;
+  color: white;
+  text-shadow: 0 0 10px white, 0 0 20px white;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #000;
+  padding: 10px 0;
+}
+
+nav a {
+  color: #f0f0f0;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+  padding: relative;
+  transition: all 0.3 ease;
+}
+ 
+nav a:hover {
+  text-shadow: 0 0 8px #f0f0f0;
+}
+
+/* ปรับ .content ให้ h2 ไม่โดนเมนูบัง */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 140px; /* ขยับลงมาให้ไม่โดน header */
+}
+
+/* สไตล์สำหรับ h2 */
+h2 {
+  display: block;
+  font-size: 40px; /* ปรับให้ใหญ่ขึ้น */
+  font-family: 'Times New Roman', Times, serif;
+  font-style: normal;
+  color: #D7B4F3; /* เปลี่ยนสีให้เป็นม่วงอ่อน */
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 5px; /* ลดระยะห่างข้างล่าง */
+}
+
+/* สไตล์สำหรับ h3 */
+h3 {
+  display: block;
+  font-size: 20px; /* ขนาดเล็กกว่าหัวข้อหลัก */
+  font-family: 'Times New Roman', Times, serif;
+  color: gray; 
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+/* สไตล์สำหรับ p */
+p {
+  display: block;
+  font-size: 18px; /* ปรับขนาดให้พอดี */
+  font-family: 'Times New Roman', Times, serif;
+  color: gray; /* ใช้สีเทา */
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+.content img {
+  display: block;
+  max-width: 80%; /* ปรับให้ไม่ใหญ่เกินไป */
+  height: auto;
+  margin: 10px auto; /* เว้นระยะห่างจาก h2 */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ปรับแต่งปุ่ม Learn More */
+.learn-more-btn {
+  display: inline-block;
+  margin-top: 20px; /* เว้นระยะห่างจากรูปภาพ */
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(45deg, #ff758c, #ff7eb3); /* สีชมพูไล่เฉด */
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(255, 117, 140, 0.3);
+}
+
+/* เอฟเฟคเมื่อ hover ปุ่ม */
+.learn-more-btn:hover {
+  background: linear-gradient(45deg, #ff7eb3, #ff758c);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 117, 140, 0.5);
+}
+
+/* ทำให้ปุ่มอยู่ตรงกลาง */
+.content {
+  text-align: center;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center; /* ถ้าต้องการให้ปุ่มอยู่ตรงกลาง */
+  gap: 10px; /* ระยะห่างระหว่างปุ่ม */
+  margin-top: 20px;
+}
